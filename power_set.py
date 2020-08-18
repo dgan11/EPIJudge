@@ -25,8 +25,10 @@ def find_powerset_of_ith_index(input_set, i, out):
     return out
 
 """
-Time  : Each element can be in or not in a set of the powerset. so O(2^n)
-Space : Each element can be in or not in a set of the powerset. so O(2^n)
+Time  : O(n * 2^n) Each element can be in or not in a set of the powerset. So O(2^n) recursive calls and 
+        for each call doing O(n) work in worst case (looping through the previous set and adding the new element)
+
+Space : O(2^n) will have the number of recursive calls on the call stack. Also have an array of 2^n elements at the end.
 """
 
 

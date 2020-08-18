@@ -27,8 +27,10 @@ def helper(A, curIdx, out):
         #print("switch back: ", A)
     
 """
-Time  : O(2^n) -- number of permutations of size n?
-Space : O()
+Time  : O(n * n!) -- n! recursive calls because n places to put the first number, n-1 places
+                    to put the second and so on. Also in each of the recursive calls we do n work
+                    in the worst case (j iteration).
+Space : O(n!) -- number of recursive calls
 """
 
 if __name__ == '__main__':
